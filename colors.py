@@ -9,7 +9,8 @@ class Color(Enum):
     GREEN = "green"
     YELLOW = "yellow"
     ORANGE = "orange"
-    PRIMARY = [RED, YELLOW, BLUE]
+
+PRIMARY = [Color.RED, Color.BLUE, Color.YELLOW]
 
 def print_red():
     """Prints the value of Color.RED"""
@@ -31,7 +32,7 @@ def mix_colors(a, b):
     """Mixes two primary colors. Returns ``b`` if one or both colors
     are not primary.
     """
-    if a in Color.PRIMARY or b in Color.PRIMARY:
+    if a in PRIMARY or b in PRIMARY:
         print("Can't combine non-primary colors")
         return b
     if a == b:
