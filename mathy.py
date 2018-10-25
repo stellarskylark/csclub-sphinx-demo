@@ -8,7 +8,7 @@ def fact(n):
     return result
 
 def pow(b, n):
-    """Power function. Returns ``b^n``. Useless wrapper for
+    """Power function. Returns :literal:`b`:sup:`n`. Useless wrapper for
     ``b**n``.
     """
     return b ** n
