@@ -8,29 +8,40 @@ title: Sphinx Tutorial for OBU CS Club
   2. Install the Sphinx package in Python according to the installation
      tutorial.
      
-     # windows
+     # Windows
         1. Install Python from here [Python](https://www.python.org/downloads/)
           note: When installing make sure to check the PATH option so that pip can be invoked from the command line.
         2. Open Command Prompt (cmd) and type in:
         
            ``pip install -U sphinx``
+           
+           if pip is not found reinstall python and check the PATH option
         3. open folder in CMD with CD ex:
-          `` cd Downloads\csclub-sphinx-demo ``
+          `` cd Downloads\csclub-sphinx-demo\ ``
      
   3. You're going to be using the terminal/command prompt in this 
      presentation. ***STAY CALM, EVERYTHING WILL BE ALRIGHT***
      
 # Creating your Sphinx Documentation Build
 
-  1. Create a `/docs` folder in the cloned repository
+  1. Create a `/docs` folder in the cloned repository:
+  ``mkdir docs``
+  
   2. Run `sphinx-quickstart` in the `docs` folder. You can use the
      default values for all except:
      - `autodoc` should be included (select `y`)
      - `viewcode` should be included (select `y`)
-  3. Run `make html` or, on Windows, `\.make.bat`
+     - `makefile` should be included (select `y`)
+     - `Windows command file` should be included (select `y`)
+  3. Run `make html` or, on Windows, `make.bat html`
   4. Edit `conf.py` to change the source path to the folder containing
-     your project's actual code (`..` in this case). Uncomment the lines that import
-     os and 
+     your project's actual code (`..` in this case).
+         
+```python
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
+```
   5. Make a new folder `ref` in `docs`
   6. In the `docs` folder, run `sphinx-apidoc .. -o ref`. This will
      automatically generate reference files for every Python module
@@ -38,6 +49,8 @@ title: Sphinx Tutorial for OBU CS Club
      `docs`.
   7. Add `ref/modules` to the table of contents in `index.rst`
   8. Rebuild the documentation.
+  ``make html`` or
+  ``make.bat html``
   9. You're done!
   
 # Other Fun Stuff
