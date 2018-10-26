@@ -42,7 +42,8 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 ```
-  5. Make a new folder `ref` in `docs`
+  5. Make a new folder `ref` in `docs`:
+  ``mkdir ref``
   6. In the `docs` folder, run `sphinx-apidoc .. -o ref`. This will
      automatically generate reference files for every Python module
      in `..` (the directory above the current one) and stuff them in
