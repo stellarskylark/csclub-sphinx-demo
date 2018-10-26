@@ -1,14 +1,14 @@
----
-layout: post
-title: Sphinx Tutorial for OBU CS Club
----
-# Setup Tasks
+# Sphinx Python Documentation Tool Tutorial
+
+## Setup Tasks
 
   1. Download `astroengisci/csclub-sphinx-demo` from GitHub
   2. Install the Sphinx package in Python according to the installation
-     tutorial.
+     tutorial. 
+     http://www.sphinx-doc.org/en/master/usage/installation.html
      
-     # Windows
+     
+     ## Windows
         1. Install Python from here [Python](https://www.python.org/downloads/)
           note: When installing make sure to check the PATH option so that pip can be invoked from the command line.
         2. Open Command Prompt (cmd) and type in:
@@ -22,7 +22,7 @@ title: Sphinx Tutorial for OBU CS Club
   3. You're going to be using the terminal/command prompt in this 
      presentation. ***STAY CALM, EVERYTHING WILL BE ALRIGHT***
      
-# Creating your Sphinx Documentation Build
+## Creating your Sphinx Documentation Build
 
   1. Create a `/docs` folder in the cloned repository:
   ``mkdir docs``
@@ -55,7 +55,7 @@ sys.path.insert(0, os.path.abspath('..'))
   9. You're done!
   Open the ``index.html`` file in ``nbuild\html\`` to see your work!
   
-# Your Own Projects
+## Your Own Projects
 In order to make this kind of documentation with your own Python projects, simply add a docstring inside your functions
 and follow the above instructions. 
 Ex:
@@ -81,13 +81,13 @@ The docstring goes underneath the function declaration.
 For more information and information on more complex docstrings visit the python website at 
 https://www.python.org/dev/peps/pep-0257/
 
-# Other Fun Stuff
+## Other Fun Stuff
 
-## Changing the theme
+### Changing the theme
 In `conf.py` change `html_theme` at (likely around line 79) to the
 Sphinx theme of your choice.
 
-## Autosummary tables
+### Autosummary tables
 
   1. Edit `conf.py` to include the `sphinx.ext.autosummary` extension.
   2. Edit `ref/modules.rst` to use the `.. autosummary::` directive
