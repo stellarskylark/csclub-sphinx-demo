@@ -53,7 +53,34 @@ sys.path.insert(0, os.path.abspath('..'))
   ``make html`` or
   ``make.bat html``
   9. You're done!
+  Open the ``index.html`` file in ``nbuild\html\`` to see your work!
   
+# Your Own Projects
+In order to make this kind of documentation with your own Python projects, simply add a docstring inside your functions
+and follow the above instructions. 
+Ex:
+
+```python
+def print_red():
+    """Prints the value of Color.RED"""
+    print(Color.RED)
+
+def complex(real=0.0, imag=0.0):
+    """Form a complex number.
+
+    Keyword arguments:
+    real -- the real part (default 0.0)
+    imag -- the imaginary part (default 0.0)
+    """
+    if imag == 0.0 and real == 0.0:
+        return complex_zero
+    ...
+```
+
+The docstring goes underneath the function declaration.
+For more information and information on more complex docstrings visit the python website at 
+https://www.python.org/dev/peps/pep-0257/
+
 # Other Fun Stuff
 
 ## Changing the theme
