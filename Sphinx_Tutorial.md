@@ -9,11 +9,13 @@ title: Sphinx Tutorial for OBU CS Club
      tutorial.
      
      # windows
-        1. Install Python from here (Python)[https://www.python.org/downloads/]
+        1. Install Python from here [Python](https://www.python.org/downloads/)
           note: When installing make sure to check the PATH option so that pip can be invoked from the command line.
         2. Open Command Prompt (cmd) and type in:
         
            ``pip install -U sphinx``
+        3. open folder in CMD with CD ex:
+          `` cd Downloads\csclub-sphinx-demo ``
      
   3. You're going to be using the terminal/command prompt in this 
      presentation. ***STAY CALM, EVERYTHING WILL BE ALRIGHT***
@@ -25,9 +27,10 @@ title: Sphinx Tutorial for OBU CS Club
      default values for all except:
      - `autodoc` should be included (select `y`)
      - `viewcode` should be included (select `y`)
-  3. Run `make html` or, on Windows, `make.bat`
+  3. Run `make html` or, on Windows, `\.make.bat`
   4. Edit `conf.py` to change the source path to the folder containing
-     your project's actual code (`..` in this case)
+     your project's actual code (`..` in this case). Uncomment the lines that import
+     os and 
   5. Make a new folder `ref` in `docs`
   6. In the `docs` folder, run `sphinx-apidoc .. -o ref`. This will
      automatically generate reference files for every Python module
