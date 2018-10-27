@@ -77,7 +77,7 @@ def complex(real=0.0, imag=0.0):
     ...
 ```
 
-The docstring goes underneath the function declaration.
+The docstring goes underneath the function declaration and can also be the first statement in the file for the module.
 For more information and information on more complex docstrings visit the python website at 
 https://www.python.org/dev/peps/pep-0257/
 
